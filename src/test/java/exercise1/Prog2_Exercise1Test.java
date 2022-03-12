@@ -1,5 +1,7 @@
 package exercise1;
 
+// Link to git repository: https://github.com/FuhrmannMartin/prog2-ss21-exercise1/tree/87ba06868355c844eb327f6b908c92a9b530ac05
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
