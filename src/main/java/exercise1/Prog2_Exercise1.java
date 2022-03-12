@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Prog2_Exercise1 {
 
+    // Valide Sonderzeichen: ()#$?!%/@#
+    final static int[] validASCII = new int[] {40, 41, 35, 36, 63, 33, 37, 47, 64};
+
     public static void main(String[] args) {
         String s = "aaasaaaa$aCa569133*33";
         checkPassword(s);
@@ -22,8 +25,6 @@ public class Prog2_Exercise1 {
 
         int[] asciiArray = getIntArray(pw);
         int[] asciiValueDiff = new int[3];
-        // Valide Sonderzeichen: ()#$?!%/@#
-        int[] validASCII = new int[] {40, 41, 35, 36, 63, 33, 37, 47, 64};
         boolean upperCaseContained = false, lowerCaseContained = false, numberContained = false, specialCharacterContained = false;
 
         // Passwort muss zwischen 8 und 25 Zeichen lang sein
@@ -70,7 +71,7 @@ public class Prog2_Exercise1 {
         }
 
         // Alle Tests bestanden
-        if (upperCaseContained && !lowerCaseContained && !numberContained && !specialCharacterContained) {
+        if (upperCaseContained && lowerCaseContained && numberContained && specialCharacterContained) {
             System.out.println("Passwort is gültig");
             return true;
         } else {
